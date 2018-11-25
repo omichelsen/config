@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Setup symlinks to Dropbox
+# bash
+rm ~/.bash_profile
+ln -s ~/config/.bash_profile ~/.bash_profile
+# git
+rm ~/.gitconfig ~/.gitignore_global
+ln -s ~/config/.gitconfig ~/.gitconfig
+ln -s ~/config/.gitignore_global ~/.gitignore_global
+# vsc
+rm ~/Library/Application\ Support/Code/User/keybindings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/config/Code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/config/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/config/Code/snippets ~/Library/Application\ Support/Code/User/
+
+# homebrew
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+# > ~/.ssh/config
+# Host *
+# 	AddKeysToAgent yes
+# 	UseKeychain yes
+# 	IdentityFile ~/.ssh/id_rsa

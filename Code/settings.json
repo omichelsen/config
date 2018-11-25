@@ -1,0 +1,46 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 13,
+    "editor.formatOnPaste": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "search.exclude": {
+        "**/.git": true,
+        "**/coverage": true,
+        "**/dist": true,
+        "**/lib": true,
+        "**/node_modules": true,
+        "**/vendor": true,
+        ".eslintcache": true,
+        "**/*.snap": true,
+    },
+    "files.exclude": {
+        "**/*.sublime*": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.nyc_output": true,
+        "**/.rpt2_cache": true,
+        "**/stats.json": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "newUntitledFile",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": false
+    },
+    "gitlens.keymap": "chorded",
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/olem/.vscode/extensions/GabrielBB.vscode-lombok-0.9.4/server/lombok.jar\" -Xbootclasspath/a:\"/Users/olem/.vscode/extensions/GabrielBB.vscode-lombok-0.9.4/server/lombok.jar\"",
+    "gitlens.historyExplorer.enabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.autofetch": true
+}
