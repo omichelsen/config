@@ -8,17 +8,27 @@ ln -s ~/config/.bash_profile ~/.bash_profile
 rm ~/.gitconfig ~/.gitignore_global
 ln -s ~/config/.gitconfig ~/.gitconfig
 ln -s ~/config/.gitignore_global ~/.gitignore_global
+
 # vsc
-rm ~/Library/Application\ Support/Code/User/keybindings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/config/Code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s ~/config/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/config/Code/snippets ~/Library/Application\ Support/Code/User/
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	rm ~/Library/Application\ Support/Code/User/keybindings.json ~/Library/Application\ Support/Code/User/settings.json
+	ln -s ~/config/Code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+	ln -s ~/config/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
+	ln -s ~/config/Code/snippets ~/Library/Application\ Support/Code/User/
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+	rm ~/.config/Code/User/keybindings.json ~/.config/Code/User/settings.json
+	ln -s ~/config/Code/keybindings.json ~/.config/Code/User/keybindings.json
+	ln -s ~/config/Code/settings.json ~/.config/Code/User/settings.json
+	ln -s ~/config/Code/snippets ~/.config/Code/User/snippets
+fi
 
 # homebrew
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 # > ~/.ssh/config
 # Host *
