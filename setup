@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# Setup symlinks to Dropbox
 # bash
-rm ~/.bash_profile
-ln -s ~/config/.bash_profile ~/.bash_profile
+echo "creating symlinks for bash"
+ln -sf ~/config/.bash_profile ~/.bash_profile
+
 # git
-rm ~/.gitconfig ~/.gitignore_global
-ln -s ~/config/.gitconfig ~/.gitconfig
-ln -s ~/config/.gitignore_global ~/.gitignore_global
+echo "creating symlinks for git"
+ln -sf ~/config/.gitconfig ~/.gitconfig
+ln -sf ~/config/.gitignore_global ~/.gitignore_global
 
 # vsc
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	rm ~/Library/Application\ Support/Code/User/keybindings.json ~/Library/Application\ Support/Code/User/settings.json
-	ln -s ~/config/Code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-	ln -s ~/config/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
-	ln -s ~/config/Code/snippets ~/Library/Application\ Support/Code/User/
+	echo "creating symlinks for VSC Mac"
+	ln -sf ~/config/Code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+	ln -sf ~/config/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
+	ln -sf ~/config/Code/snippets ~/Library/Application\ Support/Code/User/
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-	rm ~/.config/Code/User/keybindings.json ~/.config/Code/User/settings.json
-	ln -s ~/config/Code/keybindings.json ~/.config/Code/User/keybindings.json
-	ln -s ~/config/Code/settings.json ~/.config/Code/User/settings.json
-	ln -s ~/config/Code/snippets ~/.config/Code/User/snippets
+	echo "creating symlinks for VSC Linux"
+	ln -sf ~/config/Code/keybindings.json ~/.config/Code/User/keybindings.json
+	ln -sf ~/config/Code/settings.json ~/.config/Code/User/settings.json
+	ln -sf ~/config/Code/snippets ~/.config/Code/User/snippets
 fi
 
 # homebrew
