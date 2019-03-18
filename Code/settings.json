@@ -43,5 +43,6 @@
     "gitlens.historyExplorer.enabled": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "git.autofetch": true,
-    "window.restoreWindows": "all"
+    "window.restoreWindows": "all",
+    "window.titleBarStyle": "custom"
 }
