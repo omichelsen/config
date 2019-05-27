@@ -15,11 +15,10 @@ export LESS=' -R -X -F '
 export NVM_DIR="/Users/olem/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# rvm (crowdin-cli)
-# source ~/.rvm/scripts/rvm
-
 # php
-export PATH="$(brew --prefix)/bin:$PATH"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	export PATH="$(brew --prefix)/bin:$PATH"
+fi
 
 # Terminal
 # ------------------------------------------------------------------------------
