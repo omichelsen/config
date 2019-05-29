@@ -19,7 +19,7 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "creating symlinks for VSC Linux"
 	ln -sf ~/config/Code/keybindings.json ~/.config/Code/User/keybindings.json
 	ln -sf ~/config/Code/settings.json ~/.config/Code/User/settings.json
-	ln -sf ~/config/Code/snippets ~/.config/Code/User/snippets
+	ln -sf ~/config/Code/snippets ~/.config/Code/User/
 fi
 
 # homebrew
