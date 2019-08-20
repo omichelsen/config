@@ -45,5 +45,8 @@
     "git.autofetch": true,
     "window.restoreWindows": "all",
     "window.titleBarStyle": "custom",
-    "terminal.integrated.copyOnSelection": true
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.shellArgs.linux": [
+        "-l"
+    ]
 }
