@@ -48,5 +48,6 @@
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.shellArgs.linux": [
         "-l"
-    ]
+    ],
+    "workbench.colorTheme": "Solarized Dark"
 }
