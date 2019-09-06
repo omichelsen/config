@@ -51,18 +51,19 @@ alias cf='count_files_in_dir'
 # Folders
 # ------------------------------------------------------------------------------
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias calv='cd ~/projects/calvinhobbes'
+alias cart='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects/Cartoons'
 alias conf='cd ~/config'
+alias database='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects/database'
+alias dilb='cd ~/projects/dilbert'
+alias kuranz='cd ~/projects/kuranz'
 alias nodl='cd ~/projects/nodl'
 alias ole='cd ~/projects/ole.michelsen.dk'
+alias proj='cd ~/projects'
 alias regex='cd ~/projects/regex-crossword'
 alias regl='cd ~/projects/regex-lib'
 alias regm='cd ~/projects/regex-mobile'
 alias regs='cd ~/projects/regex-solver'
-alias calv='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects/Cartoons/calvinhobbes'
-alias dilb='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects/Cartoons/dilbert'
-alias proj='cd ~/projects'
-alias kuranz='cd ~/projects/kuranz'
-alias database='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects/database'
 
 # Git
 # ------------------------------------------------------------------------------
