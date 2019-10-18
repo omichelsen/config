@@ -15,14 +15,14 @@
 	"React Component": {
 		"prefix": "react-component",
 		"body": [
-			"import * as React from 'react'",
+			"import React from 'react'",
 			"import * as styles from './${1:Name}.less'",
 			"",
 			"interface I${1:Name}Props {",
 			"\t${2:}",
 			"}",
 			"",
-			"const ${1:Name}: React.FunctionComponent<I${1:Name}Props> = (props) => {",
+			"const ${1:Name}: React.FC<I${1:Name}Props> = (props) => {",
 			"\treturn (",
 			"\t\t<div className={styles.${1:Name}}>",
 			"\t\t\t{props.children}",

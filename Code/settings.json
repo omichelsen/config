@@ -49,5 +49,6 @@
     "terminal.integrated.shellArgs.linux": [
         "-l"
     ],
-    "workbench.colorTheme": "Solarized Dark"
+    "workbench.colorTheme": "Solarized Dark",
+    "git.enableSmartCommit": true
 }
