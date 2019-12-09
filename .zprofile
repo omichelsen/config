@@ -1,12 +1,3 @@
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-# Programs
-# ------------------------------------------------------------------------------
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	alias subl="open -a /Applications/Sublime\ Text\.app"
-	alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
-fi
-
 # less syntax highlight
 LESSPIPE=`which src-hilite-lesspipe.sh`
 export LESSOPEN="| ${LESSPIPE} %s"
@@ -24,13 +15,11 @@ fi
 
 # Terminal
 # ------------------------------------------------------------------------------
-export CLICOLOR=1
-
 alias la='ls -A'
 alias ll='ls -l'
 alias cwd='pwd'
-alias ebash='code ~/.bash_profile'
-alias sbash='source ~/.bash_profile'
+alias ebash='code ~/.zprofile'
+alias sbash='source ~/.zprofile'
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias npmo='npm outdated --depth=0'
 alias npml='npm list --depth=0'
@@ -75,7 +64,6 @@ alias gci='git commit'
 alias gco='git checkout'
 alias gamend='git commit --amend --no-edit'
 alias gamenda='git commit -a --amend --no-edit'
-alias gl='git l'
 alias gd='git diff'
 alias gb='git branch'
 alias gba='git branch -a'
@@ -86,16 +74,16 @@ alias spull='git stash && git pull && git stash pop'
 alias spush='git stash && git push && git stash pop'
 
 # auto-completion in git
-if [ -f ~/config/.git-completion.bash ]; then
-	. ~/config/.git-completion.bash
-fi
+#if [ -f ~/config/.git-completion.bash ]; then
+#	. ~/config/.git-completion.bash
+#fi
 
 # Git branch in prompt.
-parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] λ " #\u@\h user@host
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+# parse_git_branch() {
+# 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+# }
+# export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] λ " #\u@\h user@host
+# export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/olem/google-cloud-sdk/path.bash.inc' ]; then source '/Users/olem/google-cloud-sdk/path.bash.inc'; fi
