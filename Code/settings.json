@@ -50,5 +50,6 @@
         "-l"
     ],
     "workbench.colorTheme": "Solarized Dark",
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "terminal.integrated.shell.osx": "/bin/zsh"
 }
