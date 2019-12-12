@@ -58,6 +58,7 @@ alias regs='cd ~/projects/regex-solver'
 # Git
 # ------------------------------------------------------------------------------
 alias ga='git add'
+alias gll='git l'
 alias gs='git s'
 alias gst='git status'
 alias gci='git commit'
