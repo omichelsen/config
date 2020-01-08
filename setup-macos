@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# Close System Preferences to prevent overriding settings
+osascript -e 'tell application "System Preferences" to quit'
+
+# System Preferences > General > Close windows when quitting an app
+defaults write -globalDomain NSQuitAlwaysKeepsWindows 1
+
+# System Preferences > Dock > Automatically hide and show the Dock:
+defaults write com.apple.dock autohide -bool true
