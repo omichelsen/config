@@ -1,10 +1,16 @@
 #!/bin/zsh
 
-# zsh
-echo "creating symlinks for zsh (bash)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sf ~/config/.zprofile ~/.zprofile
-ln -sf ~/config/.zshrc ~/.zshrc
+exists() { command -v "$1" >/dev/null 2>&1 }
+
+# homebrew
+if [[ "$OSTYPE" == "darwin"* ]] && ! exists brew; then
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# nvm
+if ! [[ -e ~/.nvm ]]; then
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+fi
 
 # git
 echo "creating symlinks for git"
@@ -24,13 +30,11 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 	ln -sf ~/config/Code/snippets ~/.config/Code/User/
 fi
 
-# homebrew
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+# zsh
+echo "creating symlinks for zsh (bash)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -sf ~/config/.zprofile ~/.zprofile
+ln -sf ~/config/.zshrc ~/.zshrc
 
 # > ~/.ssh/config
 # Host *
