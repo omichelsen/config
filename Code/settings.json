@@ -49,7 +49,7 @@
     "terminal.integrated.shellArgs.linux": [
         "-l"
     ],
-    "workbench.colorTheme": "Solarized Dark",
     "git.enableSmartCommit": true,
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.colorTheme": "Winter is Coming (Dark Blue)"
 }

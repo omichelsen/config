@@ -1,5 +1,21 @@
 #!/bin/zsh
 
+exists() { command -v "$1" >/dev/null 2>&1 }
+
+## INSTALL
+
+# homebrew
+if ! exists brew; then
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# less syntax highlight
+if ! exists source-highlight; then
+	brew install source-highlight
+fi
+
+## SETTINGS
+
 # Close System Preferences to prevent overriding settings
 osascript -e 'tell application "System Preferences" to quit'
 
