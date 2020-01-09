@@ -14,6 +14,12 @@ if ! exists source-highlight; then
 	brew install source-highlight
 fi
 
+# VSC
+if ! exists code; then
+  brew cask install visual-studio-code
+  cat Code/extensions.bak | xargs -n 1 code --install-extension
+fi
+
 ## SETTINGS
 
 # Close System Preferences to prevent overriding settings
