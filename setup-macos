@@ -1,6 +1,9 @@
 #!/bin/zsh
 
-exists() { command -v "$1" >/dev/null 2>&1 }
+exists()
+{
+	command -v "$1" >/dev/null 2>&1
+}
 
 ## INSTALL
 
@@ -16,8 +19,8 @@ fi
 
 # VSC
 if ! exists code; then
-  brew cask install visual-studio-code
-  cat Code/extensions.bak | xargs -n 1 code --install-extension
+	brew cask install visual-studio-code
+	cat Code/extensions.bak | xargs -n 1 code --install-extension
 fi
 
 ## SETTINGS
@@ -30,3 +33,6 @@ defaults write -globalDomain NSQuitAlwaysKeepsWindows 1
 
 # System Preferences > Dock > Automatically hide and show the Dock:
 defaults write com.apple.dock autohide -bool true
+
+# Screenshot > Options > Store screenshot location
+defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com~apple~CloudDocs/Screenshots
