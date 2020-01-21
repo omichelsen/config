@@ -3,11 +3,6 @@ LESSPIPE=`which src-hilite-lesspipe.sh`
 export LESSOPEN="| ${LESSPIPE} %s"
 export LESS=' -R -X -F '
 
-# nvm
-export NVM_DIR="/Users/olem/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # php
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH="$(brew --prefix)/bin:$PATH"
