@@ -15,7 +15,6 @@ fi
 # volta
 if ! [[ -e ~/.volta ]]; then
 	curl https://get.volta.sh | bash
-	volta install node
 fi
 
 # git
