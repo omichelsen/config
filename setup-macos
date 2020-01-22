@@ -20,8 +20,10 @@ fi
 # VSC
 if ! exists code; then
 	brew cask install visual-studio-code
-	cat Code/extensions.bak | xargs -n 1 code --install-extension
 fi
+
+# VSC extensions
+cat Code/extensions.bak | xargs -n 1 code --install-extension
 
 ## SETTINGS
 
