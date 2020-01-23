@@ -32,6 +32,8 @@ count_files_in_dir() {
 }
 alias cf='count_files_in_dir'
 
+alias linecount='git ls-files | xargs wc -l'
+
 # Folders
 # ------------------------------------------------------------------------------
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
