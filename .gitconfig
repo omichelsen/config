@@ -63,6 +63,4 @@
 	keepBackup = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[commit]
-	template = /Users/olem/.stCommitMsg
+	path =
