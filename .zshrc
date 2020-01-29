@@ -124,8 +124,8 @@ fi
 alias la='ls -A'
 alias ll='ls -l'
 alias cwd='pwd'
-alias ebash='code ~/.zshrc'
-alias sbash='source ~/.zshrc'
+alias esource='code ~/.zshrc'
+alias ssource='source ~/.zshrc'
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias npmo='npm outdated --depth=0'
 alias npml='npm list --depth=0'
@@ -133,6 +133,7 @@ alias npmi='npm install'
 alias npmu='npm update'
 alias npmio='npm install && npm outdated'
 alias npmv='node -v && npm -v'
+alias yv='node-v && npm -v && yarn -v'
 alias cbuild='rm -rf public && npm run build && ll public'
 alias pyths='python -m SimpleHTTPServer 8080'
 
@@ -141,8 +142,7 @@ count_files_in_dir() {
 		find $@ -type f | wc -l
 	fi
 }
-alias cf='count_files_in_dir'
-
+alias filecount='count_files_in_dir'
 alias linecount='git ls-files | xargs wc -l'
 
 # Folders
@@ -154,7 +154,6 @@ alias conf='cd ~/config'
 alias database='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects/database'
 alias dilb='cd ~/projects/dilbert'
 alias kuranz='cd ~/projects/kuranz'
-alias nodl='cd ~/projects/nodl'
 alias ole='cd ~/projects/ole.michelsen.dk'
 alias proj='cd ~/projects'
 alias regex='cd ~/projects/regex-crossword'
@@ -165,7 +164,6 @@ alias regs='cd ~/projects/regex-solver'
 
 # Git
 # ------------------------------------------------------------------------------
-alias ga='git add'
 alias gll='git l'
 alias gs='git s'
 alias gst='git status'
