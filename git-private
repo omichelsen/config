@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+cd ~/projects
+
+git clone https://github.com/omichelsen/calvinhobbes.git
+git clone https://github.com/omichelsen/compare-versions.git
+git clone https://github.com/omichelsen/daily-glry.git
+git clone https://github.com/omichelsen/dilbert.git
+git clone https://github.com/omichelsen/glry-search-api.git
+git clone https://github.com/omichelsen/glry.git
+git clone https://github.com/omichelsen/kuranz.git
+git clone https://github.com/omichelsen/redux-promise-middleware-actions.git
+git clone https://github.com/omichelsen/regex-crossword-api.git
+git clone https://github.com/omichelsen/regex-lib.git
+git clone https://github.com/omichelsen/regex-mobile.git
+git clone https://github.com/omichelsen/regex-solver.git
+git clone https://olemichelsen@bitbucket.org/olemichelsen/regex-crossword.git
+git clone https://olemichelsen@bitbucket.org/olemichelsen/sendpoll.git
