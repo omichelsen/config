@@ -134,6 +134,8 @@ alias npmu='npm update'
 alias npmio='npm install && npm outdated'
 alias npmv='node -v && npm -v'
 alias yv='node-v && npm -v && yarn -v'
+alias yod='yarn outdated'
+alias yu='yarn upgrade'
 alias cbuild='rm -rf public && npm run build && ll public'
 alias pyths='python -m SimpleHTTPServer 8080'
 
