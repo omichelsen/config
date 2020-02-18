@@ -2,8 +2,8 @@
 
 cd ~/projects
 
-git clone https://bitbucket.ops.expertcity.com/scm/jive/jive-desktop.git
-git clone https://bitbucket.ops.expertcity.com/scm/shared/ucc-shared-source.git
-git clone https://bitbucket.ops.expertcity.com/scm/wc/web-meeting.git
-git clone https://bitbucket.ops.expertcity.com/scm/web/nodl.git
-git clone https://github.com/jive/jiveweb.git
+git clone --quiet https://bitbucket.ops.expertcity.com/scm/jive/jive-desktop.git
+git clone --quiet https://bitbucket.ops.expertcity.com/scm/shared/ucc-shared-source.git
+git clone --quiet https://bitbucket.ops.expertcity.com/scm/wc/web-meeting.git
+git clone --quiet https://bitbucket.ops.expertcity.com/scm/web/nodl.git
+git clone --quiet https://github.com/jive/jiveweb.git
