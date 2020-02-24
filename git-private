@@ -2,18 +2,21 @@
 
 cd ~/projects
 
-git clone --quiet https://github.com/omichelsen/calvinhobbes.git
-git clone --quiet https://github.com/omichelsen/compare-versions.git
-git clone --quiet https://github.com/omichelsen/daily-glry.git
-git clone --quiet https://github.com/omichelsen/dilbert.git
-git clone --quiet https://github.com/omichelsen/glry-search-api.git
-git clone --quiet https://github.com/omichelsen/glry-search.git
-git clone --quiet https://github.com/omichelsen/glry.git
-git clone --quiet https://github.com/omichelsen/kuranz.git
-git clone --quiet https://github.com/omichelsen/redux-promise-middleware-actions.git
-git clone --quiet https://github.com/omichelsen/regex-crossword-api.git
-git clone --quiet https://github.com/omichelsen/regex-lib.git
-git clone --quiet https://github.com/omichelsen/regex-mobile.git
-git clone --quiet https://github.com/omichelsen/regex-solver.git
+repos=('calvinhobbes' 'compare-versions' 'daily-glry' 'dilbert' 'glry-search-api' 'glry-search' 'glry' 'kuranz' 'redux-promise-middleware-actions' 'regex-crossword-api' 'regex-lib' 'regex-mobile' 'regex-solver')
+
+for repo in $repos; do
+  git clone --quiet https://github.com/omichelsen/$repo.git
+  cd $repo
+  git fetch --prune
+  git pull
+  if [[ -e yarn.lock ]]; then
+    yarn --silent install
+  fi
+  if [[ -e package-lock.json ]]; then
+    npm --silent install
+  fi
+  cd ..
+done
+
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/regex-crossword.git
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/sendpoll.git
