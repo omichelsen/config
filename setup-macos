@@ -25,6 +25,23 @@ fi
 # VSC extensions
 cat Code/extensions.bak | xargs -n 1 code --install-extension
 
+# Apache
+if [[ -e /Applications/MAMP/conf/apache/httpd.conf ]]; then
+	# MAMP
+	sed -i '' 's,#\(Include.*httpd-vhosts.conf\),\1,' /Applications/MAMP/conf/apache/httpd.conf
+	cp /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf.bak
+	ln -sf ~/config/Apache/httpd-vhosts.conf /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+elif [[ -e /etc/apache2/httpd.conf ]]; then
+	# Default install
+	sudo sed -i '' 's,#\(Include.*httpd-vhosts.conf\),\1,' /etc/apache2/httpd.conf
+	sudo sed -i '' 's,#\(LoadModule rewrite_module.*\),\1,' /etc/apache2/httpd.conf
+	sudo sed -i '' 's,#\(LoadModule php7_module.*\),\1,' /etc/apache2/httpd.conf
+	if ! [[ -e /etc/apache2/extra/httpd-vhosts.conf.bak ]]; then
+		sudo cp /etc/apache2/extra/httpd-vhosts.conf /etc/apache2/extra/httpd-vhosts.conf.bak
+		sudo ln -sf ~/config/Apache/httpd-vhosts.conf /etc/apache2/extra/httpd-vhosts.conf
+	fi
+fi
+
 ## SETTINGS
 
 # Close System Preferences to prevent overriding settings
