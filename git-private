@@ -20,5 +20,6 @@ for repo in $repos; do
   cd ..
 done
 
+git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/ole.michelsen.dk.git
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/regex-crossword.git
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/sendpoll.git
