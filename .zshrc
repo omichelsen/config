@@ -119,6 +119,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH="$(brew --prefix)/bin:$PATH"
 fi
 
+# depot tools (Electron build)
+export PATH="$HOME/projects/depot_tools:$PATH"
+
 # Terminal
 # ------------------------------------------------------------------------------
 alias la='ls -A'
