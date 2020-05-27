@@ -42,6 +42,12 @@ elif [[ -e /etc/apache2/httpd.conf ]]; then
 	fi
 fi
 
+## hosts
+grep -qxF '127.0.0.1 dev.regexcrossword.com' /etc/hosts || echo '127.0.0.1 dev.regexcrossword.com' | sudo tee -a /etc/hosts
+grep -qxF '127.0.0.1 dev.api.regexcrossword.com' /etc/hosts || echo '127.0.0.1 dev.api.regexcrossword.com' | sudo tee -a /etc/hosts
+grep -qxF '127.0.0.1 dev.dist.regexcrossword.com' /etc/hosts || echo '127.0.0.1 dev.dist.regexcrossword.com' | sudo tee -a /etc/hosts
+grep -qxF '127.0.0.1 dev.m.regexcrossword.com' /etc/hosts || echo '127.0.0.1 dev.m.regexcrossword.com' | sudo tee -a /etc/hosts
+
 ## SETTINGS
 
 # Close System Preferences to prevent overriding settings
