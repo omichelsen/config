@@ -2,7 +2,7 @@
 
 cd ~/projects
 
-repos=('calvinhobbes' 'compare-versions' 'countdown' 'daily-glry' 'dilbert' 'glry-search-api' 'glry-search' 'glry' 'kuranz' 'redux-promise-middleware-actions' 'regex-crossword-api' 'regex-lib' 'regex-mobile' 'regex-solver')
+repos=('calvinhobbes' 'compare-versions' 'countdown' 'daily-glry' 'dilbert' 'glry-search-api' 'glry-search' 'glry' 'kuranz' 'ole.michelsen.dk' 'redux-promise-middleware-actions' 'regex-crossword-api' 'regex-lib' 'regex-mobile' 'regex-solver')
 
 for repo in $repos; do
   if [[ ! -e $repo ]]; then
@@ -20,6 +20,5 @@ for repo in $repos; do
   cd ..
 done
 
-git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/ole.michelsen.dk.git
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/regex-crossword.git
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/sendpoll.git
