@@ -4,13 +4,18 @@ cd ~/projects
 
 repos=('calvinhobbes' 'compare-versions' 'countdown' 'daily-glry' 'dilbert' 'glry-search-api' 'glry-search' 'glry' 'kuranz' 'ole.michelsen.dk' 'redux-promise-middleware-actions' 'regex-crossword-api' 'regex-lib' 'regex-mobile' 'regex-solver')
 
+# https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+GREEN='\033[1;32m'
+RESET='\033[0m'
+
 for repo in $repos; do
+  echo -e "${GREEN}$repo${RESET}"
   if [[ ! -e $repo ]]; then
     git clone --quiet https://github.com/omichelsen/$repo.git
   fi
   cd $repo
-  git fetch --prune
-  git pull
+  git fetch --prune --quiet
+  git pull --quiet
   if [[ -e yarn.lock ]]; then
     yarn --silent install
   fi
