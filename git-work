@@ -2,8 +2,32 @@
 
 cd ~/projects
 
-git clone --quiet https://bitbucket.ops.expertcity.com/scm/jive/jive-desktop.git
-git clone --quiet https://bitbucket.ops.expertcity.com/scm/shared/ucc-shared-source.git
-git clone --quiet https://bitbucket.ops.expertcity.com/scm/wc/web-meeting.git
-git clone --quiet https://bitbucket.ops.expertcity.com/scm/web/nodl.git
+repos=(\
+ 'g2me/goto'\
+ 'shared/ucc-shared-source'\
+ 'wc/web-meeting'\
+)
+
+# https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+GREEN='\033[1;32m'
+RESET='\033[0m'
+
+for repo in $repos; do
+  echo -e "${GREEN}$repo${RESET}"
+  if [[ ! -e $repo ]]; then
+    git clone --quiet https://bitbucket.ops.expertcity.com/scm/$repo.git
+  fi
+  cd $repo
+  git fetch --prune --quiet
+  git pull --quiet
+  if [[ -e yarn.lock ]]; then
+    yarn --silent install
+  fi
+  if [[ -e package-lock.json ]]; then
+    npm --silent install
+  fi
+  cd ..
+done
+
+git clone --quiet https://github.com/jive/goto-shell.git
 git clone --quiet https://github.com/jive/jiveweb.git
