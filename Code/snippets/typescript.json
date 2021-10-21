@@ -29,5 +29,19 @@
 			"})"
 		],
 		"description": "Mocha it",
+	},
+	"Mocha sinon date": {
+		"prefix": "mdate",
+		"body": [
+			"let clock: sinon.SinonFakeTimers\n",
+			"beforeEach(() => {",
+			"\tclock = sinon.useFakeTimers()",
+			"\texpect(clock.now).to.eql(0)",
+			"})\n",
+			"afterEach(() => {",
+			"\tclock.restore()",
+			"})"
+		],
+		"description": "Mocha sinon date"
 	}
 }
