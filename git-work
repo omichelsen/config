@@ -15,7 +15,7 @@ RESET='\033[0m'
 for repo in $repos; do
   echo -e "${GREEN}$repo${RESET}"
   if [[ ! -e $repo ]]; then
-    git clone --quiet https://bitbucket.ops.expertcity.com/scm/$repo.git
+    git clone --quiet https://bitbucket.3amlabs.net/scm/$repo.git
   fi
   cd $repo
   git fetch --prune --quiet
