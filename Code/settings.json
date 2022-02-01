@@ -15,11 +15,12 @@
     "**/*.snap": true
   },
   "files.exclude": {
-    "**/*.sublime*": true,
     "**/.DS_Store": true,
     "**/.git": true,
     "**/.nyc_output": true,
     "**/.rpt2_cache": true,
+    "**/.yarn": true,
+    "**/*.sublime*": true,
     "**/stats.json": true
   },
   "files.trimTrailingWhitespace": true,
@@ -68,5 +69,7 @@
   "prettier.useTabs": true,
   "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "liveshare.featureSet": "insiders"
+  "liveshare.featureSet": "insiders",
+  "redhat.telemetry.enabled": false,
+  "git.confirmSync": false
 }
