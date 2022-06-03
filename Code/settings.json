@@ -71,5 +71,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveshare.featureSet": "insiders",
   "redhat.telemetry.enabled": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open"
 }
