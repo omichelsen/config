@@ -33,11 +33,7 @@
     "suppressFileNotUnderSourceControlWarning": false,
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": false
+    "suppressNoRepositoryWarning": false
   },
   "gitlens.keymap": "chorded",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -45,9 +41,7 @@
   "window.restoreWindows": "all",
   "window.titleBarStyle": "custom",
   "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.shellArgs.linux": ["-l"],
   "git.enableSmartCommit": true,
-  "terminal.integrated.shell.osx": "/bin/zsh",
   "workbench.colorTheme": "Winter is Coming (Dark Blue)",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
@@ -73,5 +67,7 @@
   "redhat.telemetry.enabled": false,
   "git.confirmSync": false,
   "explorer.confirmDragAndDrop": false,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
