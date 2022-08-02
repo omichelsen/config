@@ -19,6 +19,7 @@ repos=(\
  'regex-lib'\
  'regex-mobile'\
  'regex-solver'\
+ 'sendpoll'\
 )
 
 # https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
@@ -41,5 +42,3 @@ for repo in $repos; do
   fi
   cd ..
 done
-
-git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/sendpoll.git
