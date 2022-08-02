@@ -28,8 +28,8 @@ if ! exists code; then
 	brew install --cask visual-studio-code
 fi
 
-# VSC extensions
-cat Code/extensions.bak | xargs -n 1 code --install-extension
+# VSC extensions (now synced in account)
+# cat Code/extensions.bak | xargs -n 1 code --install-extension
 
 # Apache
 if [[ -e /Applications/MAMP/conf/apache/httpd.conf ]]; then
