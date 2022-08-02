@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# zsh
+echo "creating symlinks for zsh (bash)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -sf ~/config/.zshrc ~/.zshrc
+
 # macos
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	sh ./setup-macos
@@ -34,11 +39,6 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 	ln -sf ~/config/Code/settings.json ~/.config/Code/User/settings.json
 	ln -sf ~/config/Code/snippets ~/.config/Code/User/
 fi
-
-# zsh
-echo "creating symlinks for zsh (bash)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sf ~/config/.zshrc ~/.zshrc
 
 # > ~/.ssh/config
 # Host *
