@@ -15,6 +15,7 @@ repos=(\
  'ole.michelsen.dk'\
  'redux-promise-middleware-actions'\
  'regex-crossword-api'\
+ 'regex-crossword'\
  'regex-lib'\
  'regex-mobile'\
  'regex-solver'\
@@ -41,5 +42,4 @@ for repo in $repos; do
   cd ..
 done
 
-git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/regex-crossword.git
 git clone --quiet https://olemichelsen@bitbucket.org/olemichelsen/sendpoll.git
