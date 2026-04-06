@@ -56,6 +56,12 @@ grep -qxF '127.0.0.1 dev.m.regexcrossword.com' /etc/hosts || echo '127.0.0.1 dev
 
 ## SETTINGS
 
+# System Preferences > Keyboard > Keyboard navigation (tab between all controls)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
+# System Preferences > Keyboard > Keyboard Shortcuts > Use F1, F2, etc. keys as standard function keys
+defaults write -g com.apple.keyboard.fnState -bool true
+
 # Close System Preferences to prevent overriding settings
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -67,3 +73,6 @@ defaults write com.apple.dock autohide -bool true
 
 # Screenshot > Options > Store screenshot location
 defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com~apple~CloudDocs/Screenshots
+
+# Force reload of settings without rebooting
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
